@@ -15,12 +15,13 @@ public class TopicosController {
 
 	@RequestMapping("/topicos")
 	@ResponseBody
-	public List<Topico> lista() {
+	public List<TopicoDTo> lista() {
 		
 		Curso newCurso = new Curso("Angular", "Web");
-		Topico novoTopico = new Topico("Titulo", "Nova Mensagem", newCurso);
+		Topico novoTopico = new Topico("Titulo", "Nova AAAA", newCurso);
+		TopicoDTo novoTopicoDTO = new TopicoDTo(novoTopico);
 		
-		return Arrays.asList(novoTopico, novoTopico);
+		return Arrays.asList(novoTopicoDTO);
 		
 	}
 	
